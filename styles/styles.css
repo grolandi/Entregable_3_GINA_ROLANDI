@@ -1,0 +1,205 @@
+/* ---- Selector universal --- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- BODY --- */
+body {
+    font-family: 'Red Hat Text', Roboto, sans-serif;
+    background-color: rgb(226, 244, 246);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* flex: 1 permite que el <main> crezca y empuje el footer hacia abajo */
+main {
+    margin: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* ---- HEADER ---- */
+header {
+    background-color: #ffffff;
+}
+
+/* Título centrado dentro del header */
+.titulo {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.parrafos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ---- NAV ---- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+/* Elimina viñetas y márgenes por defecto de la lista del nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* Links en blanco para contraste sobre fondo turquesa */
+nav a {
+    color: #3EBEC0;
+    text-decoration: none;
+}
+
+/* Efecto hover: fondo semitransparente + negrita para indicar foco */
+nav a:hover {
+    color: #0d5c5e;
+    font-weight: 500;
+}
+
+/* ---- TEXTOS GENERALES ---- */
+/* 'Urbanist' para encabezados: geométrica y moderna, contrasta con
+   el cuerpo en 'Red Hat Text' */
+h1 {
+    font-family: 'Urbanist', Roboto, sans-serif;
+    color: #b55307;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Urbanist', Roboto, sans-serif;
+    color: #e88840;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+/* Separar elemetos de la lista */
+
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Listas ordenadas: el marcador hereda el naranja de h2 */
+ol li {
+    color: #e88840;
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+
+/* Listas no ordenadas: texto en negro y peso ligero */
+ul li {
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+/* Corrección de sangría excesiva en la sección de habilidades */
+.skill-item {
+    margin-left: -20px;
+}
+
+/* ---- IMÁGENES Y FIGURAS ----*/
+figure {
+    margin: 0;
+    padding-top: 15px;
+    border-radius: 1rem;
+}
+
+img {
+    border-radius: 1rem;
+    border: 2px solid #3EBEC0;
+}
+
+.logo {
+    border: none;
+    height: 40px;
+    width: auto;
+    border-radius: 0;
+}
+
+/* Pie de imagen en cursiva y peso ligero */
+figcaption {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 200;
+    padding-top: 5px;
+    color: rgb(0, 0, 0);
+}
+
+/* ---- SECCIÓN CONTACTO ---- */
+.contacto {
+    text-align: center;
+}
+
+/* Contenedor de redes sociales con lista alineada a la izquierda
+   dentro de un bloque centrado */
+.redes {
+    margin-top: 20px;
+}
+
+.redes ul {
+    display: inline-block;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+/* Links de redes en color chocolate para mantener la paleta cálida */
+.redes a {
+    text-decoration: none;
+    color: rgb(211, 101, 22);
+}
+
+/* La imagen de contacto no necesita borde; anula el estilo global de img */
+.contact-img {
+    border: none;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(211, 101, 22);
+}
+
+/* Hover en azul para diferenciar del color de reposo */
+footer a:hover {
+    font-weight: 500;
+    color: rgb(69, 69, 223);
+}
+
+/* Texto del footer ligeramente más pequeño que el cuerpo */
+footer p {
+    font-size: 0.8rem;
+    padding: 2px;
+}

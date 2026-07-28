@@ -3,7 +3,25 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+/* ---- BODY --- */
+body {
+    font-family: 'Red Hat Text', Roboto, sans-serif;
+    background-color: rgb(226, 244, 246);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* flex: 1 permite que el <main> crezca y empuje el footer hacia abajo */
+main {
+    margin: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
 }
 
 /* ---- HEADER ---- */
@@ -11,28 +29,37 @@ header {
     background-color: #ffffff;
 }
 
-/* ---- NAV ---- */
-/* Mobile-first: logo arriba y menú abajo en columna */
-nav {
+/* Título centrado dentro del header */
+.titulo {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.parrafos {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+/* ---- NAV ---- */
+nav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
     margin-top: 15px;
     margin-bottom: 15px;
-    gap: 15px;
+
 }
 
 /* Elimina viñetas y márgenes por defecto de la lista del nav */
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 20px;
-    width: 100%;
+    gap: 25px;
 }
 
 /* Links en blanco para contraste sobre fondo turquesa */
@@ -45,102 +72,6 @@ nav a {
 nav a:hover {
     color: #0d5c5e;
     font-weight: 500;
-}
-
-.logo {
-    border: none;
-    height: 40px;
-    width: auto;
-    border-radius: 0;
-}
-
-/* ----- BODY ---- */
-body {
-    font-family: 'Red Hat Text', Roboto, sans-serif;
-    background-color: rgb(226, 244, 246);
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* flex: 1 permite que el <main> crezca y empuje el footer hacia abajo */
-main {
-    margin: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    flex: 1;
-    text-align: center;
-}
-
-/* ---- GRID: HOME ---- */
-/* Mobile-first: 1 sola columna */
-main.main-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "hero"
-        "intro"
-        "idi"
-        "fe";
-    gap: 2rem;
-}
-
-.area-hero {
-    grid-area: hero;
-}
-
-.area-intro {
-    grid-area: intro;
-}
-
-.area-idi {
-    grid-area: idi;
-}
-
-.area-fe {
-    grid-area: fe;
-}
-
-/* Bloque de texto + imagen: apilado en mobile, en fila a partir de tablet/desktop */
-.content-block {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "text"
-        "img";
-    gap: 1.5rem;
-    align-items: center;
-    width: 100%;
-}
-
-.content-block .text {
-    grid-area: text;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.content-block figure {
-    grid-area: img;
-    width: 100%;
-}
-
-.content-block img {
-    width: 100%;
-    height: auto;
-}
-
-.parrafos {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-
-.parrafos p {
-    margin-bottom: 1rem;
 }
 
 /* ---- TEXTOS GENERALES ---- */
@@ -158,119 +89,58 @@ h2 {
     color: #e88840;
     font-weight: 500;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-h3 {
-    font-family: 'Urbanist', Roboto, sans-serif;
-    color: #036965;
-    font-weight: 400;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
 }
 
 p {
     margin: 0;
     font-weight: 200;
     font-size: 1rem;
-    text-align: center;
-    max-width: 800px;
 }
 
-/* Separar párrafos en main-section */
-.main-section p {
-    margin-bottom: 1rem;
-}
+/* Separar elemetos de la lista */
 
-/* ---- LISTAS ---- */
 ol {
-    text-align: center;
-    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* Listas ordenadas: el marcador hereda el naranja de h2 */
 ol li {
     color: #e88840;
     font-size: 1.5rem;
+    margin-left: 30px;
 }
 
-/* ---- GRID: SERVICIOS  ---- */
-/* Mobile-first: 1 sola columna */
-.servicios-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "s1"
-        "s2"
-        "s3";
-    gap: 2.5rem;
-    width: 100%;
-}
-
-/* margin-top: auto en la figure */
-.servicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.servicio-1 {
-    grid-area: s1;
-}
-
-.servicio-2 {
-    grid-area: s2;
-}
-
-.servicio-3 {
-    grid-area: s3;
-}
-
-.servicio figure {
-    width: 100%;
-    margin-top: auto;
-}
-
-/* aspect-ratio fijo: al ser todas las columnas del mismo ancho en cada
-   breakpoint, las 3 imágenes terminan midiendo exactamente lo mismo */
-.servicio img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-/* Listas no ordenadas: texto en negro y peso ligero.
-   text-align:left evita que las viñetas queden descuadradas: con
-   list-style-position:inside + centrado, cada li se centra por su cuenta
-   y las viñetas terminan en una posición horizontal distinta por línea. */
-ul.skill-item {
-    list-style-position: inside;
-    text-align: left;
-    width: 100%;
-}
-
+/* Listas no ordenadas: texto en negro y peso ligero */
 ul li {
     font-weight: 200;
     color: rgb(0, 0, 0);
     font-size: 1rem;
 }
 
-ol li h2 {
-    display: inline-block;
+/* Corrección de sangría excesiva en la sección de habilidades */
+.skill-item {
+    margin-left: -20px;
 }
 
 /* ---- IMÁGENES Y FIGURAS ----*/
 figure {
     margin: 0;
     padding-top: 15px;
+    border-radius: 1rem;
 }
 
 img {
     border-radius: 1rem;
     border: 2px solid #3EBEC0;
-    max-width: 600px;
+}
+
+.logo {
+    border: none;
+    height: 40px;
+    width: auto;
+    border-radius: 0;
 }
 
 /* Pie de imagen en cursiva y peso ligero */
@@ -282,33 +152,21 @@ figcaption {
     color: rgb(0, 0, 0);
 }
 
-/* A partir de tablet: las 3 fotos en fila, con flex-wrap por si no entran.
-   width:100% es necesario porque main tiene align-items:center (no stretch):
-   sin ancho explícito, .gatas se encogería al contenido en vez de ocupar
-   el ancho disponible, lo que rompe el carrusel mobile de más abajo. */
-.gatas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 1.5rem;
+/* ---- SECCIÓN CONTACTO ---- */
+.contacto {
+    text-align: center;
 }
-
-.gatas img {
-    max-width: 140px;
-}
-
-/* ---- CONTACTO ---- */
 
 /* Contenedor de redes sociales con lista alineada a la izquierda
    dentro de un bloque centrado */
 .redes {
     margin-top: 20px;
+}
+
+.redes ul {
+    display: inline-block;
+    text-align: left;
     line-height: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
 }
 
 /* Links de redes en color chocolate para mantener la paleta cálida */
@@ -317,37 +175,16 @@ figcaption {
     color: rgb(211, 101, 22);
 }
 
-/* Mobile-first: imagen y redes apiladas */
-.contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.contact-content figure {
-    width: 100%;
-    max-width: 280px;
-}
-
-/* La imagen de contacto no necesita borde; anula el estilo global de img.
-   width/height evitan que desborde el viewport en mobile */
+/* La imagen de contacto no necesita borde; anula el estilo global de img */
 .contact-img {
     border: none;
-    width: 100%;
-    height: auto;
 }
 
 /* ---- FOOTER ---- */
 footer {
     background-color: #ffffff;
-    padding: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    text-align: center;
+    padding: 15px;
 }
 
 footer a {
@@ -364,130 +201,5 @@ footer a:hover {
 /* Texto del footer ligeramente más pequeño que el cuerpo */
 footer p {
     font-size: 0.8rem;
-}
-
-/* =========================================================
-   Mobile-first: 1 columna
-   ========================================================= */
-
-/* ---- MOBILE: hasta 767px ---- */
-/* Solo mobile: carrusel deslizable de una foto a la vez (gatas) */
-@media (max-width: 767.98px) {
-    .gatas {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        overflow-x: auto;
-        /* Limita el scroll de las fotos para que se centren en la pantalla */
-        scroll-snap-type: x mandatory;
-        gap: 0;
-        scrollbar-width: none;
-    }
-
-    .gatas::-webkit-scrollbar {
-        display: none;
-    }
-
-    .gatas figure {
-        flex: 0 0 100%;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-    }
-
-    .gatas img {
-        max-width: 220px;
-    }
-}
-
-/* ---- TABLET: min-width 768px ---- */
-@media (min-width: 768px) {
-
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-
-    nav ul {
-        flex-wrap: nowrap;
-    }
-
-    /* texto e imagen pasan de apilados a 2 columnas */
-    .content-block {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "text img";
-    }
-
-    .content-block .text {
-        text-align: left;
-    }
-
-    .content-block .text p {
-        text-align: left;
-    }
-
-    /* Servicios: de 1 columna a 2 (el 3er servicio ocupa el ancho completo) */
-    .servicios-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "s1 s2"
-            "s3 s3";
-    }
-
-    /* Modificador para alternar el lado de la imagen en bloques consecutivos */
-    .content-block.reverse {
-        grid-template-areas: "img text";
-    }
-
-    .gatas img {
-        max-width: 180px;
-    }
-
-    /* Contacto: imagen y redes en fila a partir de tablet */
-    .contact-content {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .contact-content figure {
-        max-width: 260px;
-    }
-}
-
-/* ---- DESKTOP: min-width 1024px ---- */
-@media (min-width: 1024px) {
-
-    /* Ancho máximo común a todas las páginas para no estirar el contenido */
-    main {
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .content-block {
-        grid-template-columns: 1fr 1.1fr;
-        gap: 3rem;
-    }
-
-    /* Servicios en 3 columnas */
-    .servicios-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "s1 s2 s3";
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .gatas img {
-        max-width: 220px;
-    }
-
-    .contact-content {
-        gap: 4rem;
-    }
-
-    .contact-content figure {
-        max-width: 320px;
-    }
+    padding: 2px;
 }

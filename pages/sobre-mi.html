@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../styles/styles.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="/styles/styles.css" rel="stylesheet">
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <title>Entregable 2 - Gina Rolandi</title>
+  <title>Sobre Mi</title>
 </head>
 
 <body>
@@ -29,17 +31,54 @@
     <section>
       <h1>Sobre mí</h1>
     </section>
-    <section class="parrafos">
-      <p>Mi nombre es Gina Rolandi y nací el 8 de Mayo del 95 en La Plata.</p>
-      <p>A los 8 años me fuí a vivir a Costa Rica con mi familia, y desde hace ya 4 años que vivo en España.</p>
-      <h2>Mis estudios</h2>
-      <p>Soy Ingeniera en Diseño Industrial graduada del Tecnológico de Costa Rica, y decidí realizar el curso de Front
-        End para complementar mis
-        conocimientos como diseñadora UX/UI y hacer mi perfil profecional mas competitivo.</p>
+    <section>
+      <p>Mi nombre es Gina Rolandi y nací el 8 de Mayo del 95 en La Plata. A los 8 años me fuí a vivir a Costa Rica con
+        mi familia, y hace 4 años (2022) decidí mudarme a España sola en busca de una mejor calidad de vida. Soy amante
+        de los animales, del futbol y del pádel. Actualmente vivo en Pamplona con mis tres gatas; Fury, Echo y Lili.</p>
+    </section>
+    <section class="gatas">
       <figure>
-        <img src="../assets/ux-ui-to-front-end.jpg"
-          alt="Esquema de las diferentes responsabilidades que se dividen entre User Exprience, User Interface y Front End Dev">
-        <figcaption>UI/UI design & Front End responsabilities</figcaption>
+        <img src="/assets/Fury.jpg" alt="Foto de mi gata Fury de 8 años">
+        <figcaption>Fury (8 años)</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/Echo.jpg" alt="Foto de mi gata Echo de 8 años">
+        <figcaption>Echo (8 años)</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/Lili.jpg" alt="Foto de mi gata Lili de 4 años">
+        <figcaption>Lili (4 años)</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Mis estudios</h2>
+    </section>
+
+    <section class="content-block">
+      <div class="text">
+        <h3>Universidad</h3>
+        <p>Soy Ingeniera en Diseño Industrial graduada del Tecnológico de Costa Rica (TEC) en el 2021. </p>
+        <p>El TEC es una universidad pública y estatal fundada en 1971. Es líder en la enseñanza e investigación de
+          ingeniería, tecnología y ciencias empresariales.</p>
+      </div>
+      <figure>
+        <img src="/assets/idi-tec.png" alt="Escuela de Ingeniería en Diseño Indusitrial en el TEC de Cartago">
+        <figcaption>Escuela IDI TEC, Cartago, CR</figcaption>
+      </figure>
+    </section>
+
+    <section class="content-block reverse">
+      <div class="text">
+        <h3>Inglés</h3>
+        <p>A pesar de ir a un colegio privado bilingüe en Costa Rica, mis padres se esforzaron por enviarme a un
+          instituto
+          de inglés para que pudiera certificar mis estudios de inglés con el objetivo de que me abriera puertas en el
+          futuro.</p>
+        <p>Gracias a ello cuento con un certificado de inglés de nivel C2, y puedo decir que soy 100% bilingüe.</p>
+      </div>
+      <figure>
+        <img src="/assets/c2-cert.png" alt="Certificado inglés C2">
+        <figcaption>Certificado inglés C2</figcaption>
       </figure>
     </section>
   </main>
@@ -49,6 +88,10 @@
     <p>Visita mi <a href="//www.linkedin.com/in/ginarolandi/" target="_blank">LinkedIn</a>!</p>
   </footer>
 
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../styles/styles.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="/styles/styles.css" rel="stylesheet">
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <title>Entregable 2 - Gina Rolandi</title>
+  <title>Servicios</title>
 </head>
 
 <body>
@@ -29,8 +31,8 @@
 
   <main>
     <h1>Servicios</h1>
-    <ol>
-      <li>
+    <ol class="servicios-grid">
+      <li class="servicio servicio-1">
         <h2>Diseño de producto:</h2>
         <ul class="skill-item">
           <li>Investigación</li>
@@ -39,11 +41,11 @@
           <li>Validación</li>
         </ul>
         <figure>
-          <img src="../assets/product-design.jpg" alt="Chica trabajando en el boceto de un producto">
+          <img src="/assets/product-design.jpg" alt="Chica trabajando en el boceto de un producto">
           <figcaption>Ejemplo del proceso de diseño de un producto</figcaption>
         </figure>
       </li>
-      <li>
+      <li class="servicio servicio-2">
         <h2>Diseño UX/UI:</h2>
         <ul class="skill-item">
           <li>Diseño visual y Mockups:</li>
@@ -55,9 +57,24 @@
           <li>Prototipado interactivo</li>
         </ul>
         <figure>
-          <img src="../assets/ux-ui-design.jpg"
+          <img src="/assets/ux-ui-design.jpg"
             alt="Computadora portátil que muestra un ejemplo de diseño de una interfaz de usuario">
-          <figcaption>Ejemplo de un diseño de una interfáz</figcaption>
+          <figcaption>Ejemplo de un diseño de una interfaz</figcaption>
+        </figure>
+      </li>
+      <li class="servicio servicio-3">
+        <h2>Diseño de marca:</h2>
+        <ul class="skill-item">
+          <li>Investigación de mercado y de usuarios</li>
+          <li>Estrategia de marca y desarrollo de conceptos</li>
+          <li>Diseño de Logotipo</li>
+          <li>Identidad Visual</li>
+          <li>Aplicaciones de la Marca</li>
+          <li>Manual de Identidad</li>
+        </ul>
+        <figure>
+          <img src="/assets/brand.jpg" alt="Mano que sostiene cuaderno con bocetos de un logotipo">
+          <figcaption>Ejemplo del proceso de diseño de un logotipo</figcaption>
         </figure>
       </li>
     </ol>
@@ -68,6 +85,10 @@
     <p>Visita mi <a href="//www.linkedin.com/in/ginarolandi/" target="_blank">LinkedIn</a>!</p>
   </footer>
 
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
